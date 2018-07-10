@@ -5,10 +5,11 @@ jobs:
       only:
         - dockerandCItest
     docker:
-      - image: circleci/node:carbon  
-    steps:
-      - checkout
-      - run: npm i --no-audit -g eslint && eslint .
+      - image: circleci/node:carbon
+    test:
+      steps:
+        - checkout
+        - run: npm i --no-audit -g eslint && eslint .
 workflows:
   version: 2
   test:
