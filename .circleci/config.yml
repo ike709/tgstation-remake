@@ -9,4 +9,4 @@ jobs:
     steps:
       - checkout
       - run: sudo npm i --no-audit -g eslint
-      - run: npm eslint .
+      - run: eslint . --format junit
