@@ -8,4 +8,4 @@ jobs:
       - image: circleci/node:carbon
     steps:
       - checkout
-      - run: npm i --no-audit -g eslint && eslint .
+      - run: sudo npm i --no-audit -g eslint && eslint .
