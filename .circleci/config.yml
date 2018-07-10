@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - dockerandCItest
+        - CItest2
+    docker:
+      - image: circleci/node:carbon
+    steps:
+      - checkout
+      - run: sudo npm i --no-audit -g eslint
+      - run: eslint . --format junit
