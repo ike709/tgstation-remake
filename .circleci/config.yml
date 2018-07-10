@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+        - dockerandCItest
   test:
     docker:
       - image: circleci/node:carbon
